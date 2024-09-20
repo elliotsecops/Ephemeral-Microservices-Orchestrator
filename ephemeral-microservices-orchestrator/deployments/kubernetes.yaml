@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orquestador-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: orquestador
+  template:
+    metadata:
+      labels:
+        app: orquestador
+    spec:
+      containers:
+      - name: orquestador
+        image: your-docker-image
+        ports:
+        - containerPort: 8080

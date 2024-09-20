@@ -1,0 +1,1 @@
+docker:  image_name: "my_microservice_image"  network: "default"
